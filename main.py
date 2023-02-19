@@ -10,14 +10,32 @@ Input: 5
 Output: 120
 """
 
+# # 1
 # n = int(input())
- 
 # fact = 1
 # while n > 1:
 #     fact *= n
 #     n -= 1
  
 # print(fact)
+
+# # 2
+# import math
+# n = int(input('Fact: '))
+# res = math.factorial(n)
+# print(res)
+
+# # 3
+# n = int(input())
+# if n == -1 or n == 1:
+#     print(1)
+# elif n > 1:
+#     factorial = 1
+#     for i in range(2, n + 1):
+#         factorial *= i
+#     print(factorial)
+# elif n == 0:
+#     print('1')
 
 
 """
@@ -30,12 +48,13 @@ Input: 5
 Output: 6
 """
 
+# # 1
 # a = int(input())
 # if a == 0:
 #     print(0)
 # else:
 #     prev, next = 0, 1
-#     n = 1
+#     n = 2
 #     while next <= a:
 #         if next == a:
 #             print(n)
@@ -44,6 +63,20 @@ Output: 6
 #         n += 1
 #     else:
 #         print(-1)
+
+# # 2
+# num = int(input())
+# first = 0
+# second = 1
+# counter = 2
+# while second <= num:
+#     if second == num:
+#         print(counter)
+#         break
+#     first, second = second, first + second
+#     counter+=1
+# else:
+#     print(-1)
 
 
 """
