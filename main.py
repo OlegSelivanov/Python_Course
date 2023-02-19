@@ -38,6 +38,7 @@ Output: 120
 #     print('1')
 
 
+
 """
 Задача №11. Решение в группах
 Дано натуральное число A > 1. Определите, каким по
@@ -77,6 +78,16 @@ Output: 6
 #     counter+=1
 # else:
 #     print(-1)
+
+# # 3
+# def fib(n: int) -> int:
+#     old_n = 0
+#     new_n = 1
+#     fib = 0
+#     for i in range(n-1):
+#         fib = old_n + new_n
+#         old_n, new_n = new_n, fib
+#     return fib
 
 
 """
