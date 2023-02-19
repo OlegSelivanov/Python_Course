@@ -80,14 +80,20 @@ Output: 6
 #     print(-1)
 
 # # 3
-# def fib(n: int) -> int:
-#     old_n = 0
-#     new_n = 1
-#     fib = 0
-#     for i in range(n-1):
-#         fib = old_n + new_n
-#         old_n, new_n = new_n, fib
-#     return fib
+# number = int (input ("натуральное число A > 1 - > "))
+
+# flag = True
+# i = 1
+# while(flag):
+#     temp = t10.fib(i)
+#     if temp < number:
+#         i+=1
+#     elif temp == number:
+#         print(i)
+#         flag = False
+#     else:
+#         print(-1)
+#         flag = False
 
 
 """
@@ -142,6 +148,7 @@ Input: 5 -> 5 1 6 5 9
 Output: 1 9
 """
 
+# # 1
 # n = int(input())
 
 # if n < 2 :
@@ -151,3 +158,34 @@ Output: 1 9
 #   list.sort()
 
 #   print(list[0],list[-1])
+
+# # 2
+# N = int(input(': '))
+# sp = []
+# for i in range(N):
+#     sp.append(int(input()))
+#     min = sp[0]
+#     max = sp[0]
+# for i in range(N):
+#     if sp[i] > max:
+#         max = sp[i]
+#     if sp[i] < min:
+#         min = sp[i]
+# print(min, max)
+
+# # 3
+# N = int(input(': '))
+# sp = []
+# for i in range(N):
+#     wm = randint(0, 10)
+#     sp.append(wm)
+#     min = sp[0]
+#     max = sp[0]
+# print(sp)
+# for i in range(N):
+#     if sp[i] > max:
+#         max = sp[i]
+#     if sp[i] < min:
+#         min = sp[i]
+# print(min, max)
+
