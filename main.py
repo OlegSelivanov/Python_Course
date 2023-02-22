@@ -189,3 +189,121 @@ Output: 1 9
 #         min = sp[i]
 # print(min, max)
 
+
+
+# Семинар 3. Списки и словари
+
+"""
+Задача №17. Решение в группах
+Дан список чисел. Определите, сколько в нем
+встречается различных чисел.
+
+Input: [1, 1, 2, 0, -1, 3, 4, 4]
+Output: 6
+"""
+
+# print(len(set(input().split())))
+
+
+
+"""
+Задача №19. Решение в группах
+Дана последовательность из N целых чисел и число
+K. Необходимо сдвинуть всю последовательность
+(сдвиг - циклический) на K элементов вправо, K –
+положительное число.
+Input: [1, 2, 3, 4, 5] k = 3
+Output: [4, 5, 1, 2, 3]
+"""
+
+# a = input().split()
+# k = int(input())
+# k = k%len(a)
+# # if k<0:
+# #     k = abs(k)
+# #     print(*a[k:],end =' ')
+# #     print(*a[0:k])
+# #     exit()
+ 
+# if k>=0:
+#     k = abs(k)
+#     print(*a[-k:], end=' ')
+#     print(*a[0:-k])
+
+# l = list(map(int, input().split()))
+# n = int(input())
+# if n>=0:
+#     for ii in range(n):
+#         ff = [0] * len(l)
+#         ff[0] = l[len(l)-1]
+#         for i in range(0, len(l)-1):
+#             ff[i+1] = l[i]
+#         l = ff
+#     print(*ff)
+# else:
+#     for ii in range(abs(n)):
+#         ff = [0] * len(l)
+#         ff[len(l)-1] = l[0]
+#         for i in range(len(l)-1, 0, -1):
+#             ff[i-1] = l[i]
+#         l = ff
+#     print(*ff)
+
+
+"""
+Задача №21. Решение в группах
+Напишите программу для печати всех уникальных
+значений в словаре.
+Input: [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
+{"VI": "S005"}, {"VII": " S005 "}, {" V ":" S009 "}, {" VIII
+":" S007 "}]
+Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
+Примечание: Список словарей задан изначально.
+Пользователь его не вводит
+"""
+
+# L = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+# print("Original List: ",L)
+# u_value = set( val for dic in L for val in dic.values())
+# print("Unique Values: ",u_value)
+
+
+
+"""
+Задача №23. Решение в группах
+Дан массив, состоящий из целых чисел. Напишите
+программу, которая подсчитает количество
+элементов массива, больших предыдущего (элемента
+с предыдущим номером)
+Input: [0, -1, 5, 2, 3]
+Output: 2 (-1 < 5, 2 < 3)
+Примечание: Пользователь может вводить значения
+списка или список задан изначально.
+"""
+
+# num = int(raw_input('n: '))
+# inp = raw_input('list: ').split()
+ 
+# if len(inp) != num:
+#     print "ERR:", num, "vs", len(inp)
+# else:
+#     print len([n for n, el in enumerate(inp) if n <= len(inp)-2 and inp[n] < inp[n+1]])
+
+
+
+a = map(int, input().split())
+a = list(a)
+n = int(input())
+k = 0
+for i in range(1, len(a)):
+    if a[i] > a[i - 1]:
+        k += 1
+print(k)
+
+
+
+
+
+
+
+
