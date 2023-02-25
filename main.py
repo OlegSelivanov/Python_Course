@@ -215,40 +215,17 @@ K. Необходимо сдвинуть всю последовательнос
 Input: [1, 2, 3, 4, 5] k = 3
 Output: [4, 5, 1, 2, 3]
 """
+# # Срез
+# list_2 = [1, 2, 3, 4, 5]
+# k = int(input("Введите k: "))
+# print(f"{list_2[len(list_2)-k:len(list_2)]} {list_2[:len(list_2)-k]}")
 
-# a = input().split()
-# k = int(input())
-# k = k%len(a)
-# # if k<0:
-# #     k = abs(k)
-# #     print(*a[k:],end =' ')
-# #     print(*a[0:k])
-# #     exit()
- 
-# if k>=0:
-#     k = abs(k)
-#     print(*a[-k:], end=' ')
-#     print(*a[0:-k])
-
-# l = list(map(int, input().split()))
-# n = int(input())
-# if n>=0:
-#     for ii in range(n):
-#         ff = [0] * len(l)
-#         ff[0] = l[len(l)-1]
-#         for i in range(0, len(l)-1):
-#             ff[i+1] = l[i]
-#         l = ff
-#     print(*ff)
-# else:
-#     for ii in range(abs(n)):
-#         ff = [0] * len(l)
-#         ff[len(l)-1] = l[0]
-#         for i in range(len(l)-1, 0, -1):
-#             ff[i-1] = l[i]
-#         l = ff
-#     print(*ff)
-
+# # Перебор
+# lst = [1, 2, 3, 4, 5]
+# k = 2
+# for i in range(k):
+#     lst.insert(0, lst.pop(-1))
+# print(lst)
 
 """
 Задача №21. Решение в группах
@@ -262,11 +239,21 @@ Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 Пользователь его не вводит
 """
 
-# L = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+# L = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":" S005 "}, {" V ":" S009 "},{" VIII ":" S007 "}]
 # print("Original List: ",L)
 # u_value = set( val for dic in L for val in dic.values())
 # print("Unique Values: ",u_value)
 
+
+# list_dict = [{"V": "S001"}, {"V": "S002", "f": "asdfa"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": " S005 "}, {" V ":" S009 "}, {" VIII ":" S007 "}]
+# list_uniq = []
+# for d in list_dict:
+#     #d = {"V": "S001", "V!": "S00f1"}
+#     for val in list(d.values()):
+#         # val = ["S001"; "S00f1"]
+#         if val not in list_uniq:
+#             list_uniq.append(val)
+# print(list_uniq)
 
 
 """
@@ -291,13 +278,29 @@ Output: 2 (-1 < 5, 2 < 3)
 
 
 
-a = map(int, input().split())
-a = list(a)
-n = int(input())
-k = 0
-for i in range(1, len(a)):
-    if a[i] > a[i - 1]:
-        k += 1
-print(k)
+# a = map(int, input().split())
+# a = list(a)
+# n = int(input())
+# k = 0
+# for i in range(1, len(a)):
+#     if a[i] > a[i - 1]:
+#         k += 1
+# print(k)
 
 
+
+
+
+""" Для дом задания №20
+gen_dict = eng_dict
+gen_dict.update(rus_dict)
+
+amount = 0
+s = input("Введите строку: ").upper()
+for c in s:
+    for k, v in gen_dict.items():
+        if k.find(c) >= 0:
+            amount += v
+            break
+print(f"Стоимость слова = {amount}.")
+"""
